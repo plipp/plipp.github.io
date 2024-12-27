@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rich-black: #0d1b2aff;
+  --oxford-blue: #1b263bff;
+  --yinmn-blue: #415a77ff;
+  --silver-lake-blue: #778da9ff;
+  --platinum: #e0e1ddff;
+  --orange: #bd5d38;
+
+  --primary-color: var(--platinum);
+  --primary-bg: var(--oxford-blue);
+  --secondary-color: var(--oxford-blue);
+  --secondary-bg: var(--platinum);
+  --tertiary-color: var(--orange);
+  --tertiary-bg: var(--rich-black);
+  --quaternary-color: var(--yinmn-blue);
+  --quinary-color: var(--silver-lake-blue);
+
+  --sidebar-width: 25%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  color: var(--quaternary-color);
+  overflow-x: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+
+  font-size: larger;
+
+  position: fixed;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 4px solid var(--tertiary-color);
+
+  background: no-repeat center/100% url('../assets/img/profile.jpg');
+}
+
+.profile:hover {
+  border: 4px solid var(--primary-color);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .nav-item {
+  margin: 0.5em 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.navbar a:hover {
+  color: var(--quinary-color);
+}
+
+.social,
+.skills {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  font-size: 3em;
+}
+
+.social a {
+  text-decoration: none;
+  color: var(--quaternary-color);
+}
+
+.social a:hover {
+  color: var(--quinary-color);
+}
+
+.content {
+  height: 100vh;
+  padding: 1rem;
+}
+
+.resume-section {
+  border-bottom: 1px solid var(--quinary-color);
+  min-height: 70vh;
+}
+
+.resume-section h1 {
+  font-size: 3.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.resume-section h2 {
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+
+  text-transform: uppercase;
+}
+
+.resume-section h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.resume-section-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-section-header .position {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.resume-section-item .company,
+.resume-section-item .university {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: var(--tertiary-color);
+}
+
+.resume-section-item .company a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.resume-section-item {
+  padding: 1rem 0;
+  margin-bottom: 2.5rem;
+}
+
+.resume-section-item .details ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.workflow {
+  list-style-type: '\2713';
+  margin-left: 1.5rem;
+}
+
+/* see https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap-utilities.css */
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.color-tertiary {
+  color: var(--tertiary-color) !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sidebar {
+    display: flex;
+    width: var(--sidebar-width);
+    padding: 3rem;
+  }
+
+  .content {
+    margin-left: var(--sidebar-width);
+    padding: 3rem;
+  }
+  
+}
